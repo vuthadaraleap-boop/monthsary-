@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proposal Letter — Rose & Letter Animation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Full-screen hearts layer (hearts are appended by JS here) -->
+  <div id="hearts" aria-hidden="true"></div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button id="openBtn" class="btn primary">Open My Letter 💌</button>
+    <button id="resetBtn" class="btn secondary" aria-hidden="true">Reset</button>
+    <button id="musicBtn" class="btn secondary" aria-label="Toggle music" aria-hidden="true">🎵</button>
+  </div>
+
+  <!-- Stage where envelope and letter are layered -->
+  <div class="stage" id="stage" aria-live="polite">
+    <!-- Envelope (pure CSS shape) - sits behind the letter -->
+    <div class="envelope" id="envelope" aria-hidden="true">
+      <div class="envelope-body"></div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-seal">❤</div>
+    </div>
+
+    <!-- 3D Paper Container -->
+    <div class="paper-container">
+      <div class="paper-fold">
+        <article class="letter" id="letter" role="article" aria-label="Proposal letter">
+          <div class="sticker" aria-hidden="true">❤</div>
+          <div class="letter-inner">
+            <h2 class="salutation" id="salutation">Dear Kali Linux,</h2>
+            <div class="content" id="letterContent">
+              <p>
+                From the moment I met you, my world felt brighter.
+                Your smile inspires me, your kindness touches my heart,
+                and every day with you feels like a beautiful story.
+              </p>
+              <p>
+                I want to write the next chapters of life with you.
+                Will you be mine forever? ❤️
+              </p>
+              <blockquote class="quote">“You are my today and all of my tomorrows.”</blockquote>
+              <p class="signature">— With love, @ParmanandKS</p>
+            </div>
+          </div>
+          <img src="assets/rose.png" alt="Red rose" class="rose" id="rose" />
+        </article>
+      </div>
+    </div>
+    <!-- Proposal buttons below the paper -->
+    <div class="proposal-btns">
+      <button id="yesBtn" class="btn primary" style="display:none;margin-top:24px;">Yes, I will! 💍</button>
+      <button id="noBtn" class="btn secondary" style="display:none;margin-top:24px;margin-left:12px;">No</button>
+    </div>
+  </div>
+
+  <!-- Background music (hidden) -->
+  <audio id="bgMusic" src="assets/romantic.mp3" loop preload="auto"></audio>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
