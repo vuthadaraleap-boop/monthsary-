@@ -1,5 +1,5 @@
 /* ===========================================================
-   style.css (optimized & enhanced)
+   style.css (Light Blue Theme - optimized & enhanced)
    =========================================================== */
 
 /* Basic reset and sensible defaults */
@@ -8,7 +8,7 @@ html,body { height: 100%; }
 body {
   margin: 0;
   font-family: "Kalam", cursive, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(135deg,#ffdde1 0%, #ee9ca7 100%), url("assets/backgrounds.jpg");
+  background: linear-gradient(135deg,#a8d8ea 0%, #7ec8e3 50%, #b8e6f5 100%), url("assets/backgrounds.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -40,7 +40,7 @@ body {
 }
 .btn:active { transform: translateY(1px) scale(.997); }
 .btn.primary {
-  background: linear-gradient(180deg,#ff5871,#e9445b);
+  background: linear-gradient(180deg,#5dade2,#3498db);
   color: #fff;
 }
 .btn.secondary {
@@ -79,7 +79,7 @@ body {
 .envelope-body {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,#dcae85,#e6caa7 60%, #e3c7a0 100%);
+  background: linear-gradient(180deg,#d4e9f7,#ebf5fb 60%, #e8f4f8 100%);
   border-radius: 10px;
   box-shadow: 0 30px 50px rgba(0,0,0,0.25);
   border: 1px solid rgba(0,0,0,0.08);
@@ -92,7 +92,7 @@ body {
   left: 0;
   transform-origin: center top;
   clip-path: polygon(0 0, 50% 100%, 100% 0);
-  background: linear-gradient(180deg,#f6dfb8,#e7c99f);
+  background: linear-gradient(180deg,#c8e3f5,#d6ecf7);
   box-shadow: inset 0 -6px 12px rgba(0,0,0,0.06);
 }
 .envelope-seal {
@@ -105,7 +105,7 @@ body {
   height: 36px;
   display: grid;
   place-items: center;
-  background: #ff5b6f;
+  background: #5dade2;
   color: white;
   border-radius: 50%;
   box-shadow: 0 6px 14px rgba(0,0,0,0.18);
@@ -122,7 +122,7 @@ body {
   position: relative;
   width: var(--width);
   height: var(--height);
-  max-height: 84vh;
+  max-height: 94vh;
   z-index: 40;
   display: block;
   transform-origin: center;
@@ -141,18 +141,17 @@ body {
   position: absolute;
   inset: 0;
   background: url('assets/paper.png') center center/contain no-repeat;
-  /* Use your provided torn paper image as assets/paper.png */
   box-shadow: none;
   border-radius: 0;
   border: none;
-  padding: 48px 56px 53px 64px; /* Adjust for your image's torn edges */
+  padding: 48px 56px 53px 64px;
   overflow: visible;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   height: 100%;
-  aspect-ratio: 735/752; /* Use your image's width/height */
+  aspect-ratio: 735/752;
   min-width: 320px;
   min-height: 260px;
   max-width: 100%;
@@ -195,7 +194,7 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 8px;
-  background: linear-gradient(180deg,#ff4760,#e93750);
+  background: linear-gradient(180deg,#5dade2,#3498db);
   color: #fff;
   display: grid;
   place-items: center;
@@ -208,7 +207,7 @@ body {
 /* ---------- Letter textual content ---------- */
 .letter h2.salutation {
   margin: 6px 0 12px 0;
-  color: #d4415a;
+  color: #2e86ab;
   font-size: clamp(20px, 3.4vw, 26px);
   line-height: 1.05;
 }
@@ -220,7 +219,7 @@ body {
 }
 .quote {
   margin: 18px 0;
-  border-left: 4px solid #f06c79;
+  border-left: 4px solid #5dade2;
   padding-left: 12px;
   color: #5b5b5b;
   font-style: italic;
@@ -234,7 +233,7 @@ body {
 
 /* ---------- Rose image styling ---------- */
 .rose {
-  display: none !important; /* Always hidden in the letter */
+  display: none !important;
 }
 
 /* ---------- Hearts (falling) styles ---------- */
@@ -297,18 +296,6 @@ body {
 }
 
 /* ---------- Proposal buttons ---------- */
-.proposal-btns {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 12px;
-  margin-bottom: 8px;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-}
-
-/* Proposal buttons below the paper */
 .proposal-btns {
   display: flex;
   justify-content: center;
@@ -420,7 +407,7 @@ body {
 
 /* 3D Paper Container */
 .paper-container {
-  perspective: 1200px;
+  perspective: 1500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -457,7 +444,7 @@ body {
 .letter .letter-inner {
   background: linear-gradient(180deg, #fffef8 0%, #f9f6e7 100%);
   border-radius: 10px;
-  padding: 48px 56px 53px 56px; /* bottom padding 5px more */
+  padding: 48px 56px 53px 56px;
   box-shadow:
     0 2px 8px rgba(0,0,0,0.04),
     0 1.5px 0.5px rgba(0,0,0,0.04);
@@ -479,7 +466,7 @@ body {
   }
 }
 
-/* Animated rose overlay for proposal */
+/* Animated flower overlay for proposal */
 .rose-animate {
   position: fixed;
   left: 50%;
@@ -489,7 +476,6 @@ body {
   z-index: 9999;
   pointer-events: none;
   opacity: 1;
-  /* Start at bottom center, stem at bottom, head pointing up */
   transform: translate(-50%, 0) scale(0.1);
   transition:
     transform 2.5s cubic-bezier(.22,1.2,.36,1),
@@ -497,8 +483,6 @@ body {
 }
 
 .rose-animate.grow {
-  /* Move rose upward so its head is centered as it grows */
-  /* 50vh - (rose height * scale / 2) puts the head in the center */
   transform: translate(-50%, -50vh) scale(18);
   opacity: 0;
   transition:
